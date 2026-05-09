@@ -1,6 +1,10 @@
 name: "Setup OpenSeesPy"
 description: "Install OpenSeesPy and dependencies"
 
+branding:
+  icon: "package"
+  color: "blue"
+  
 runs:
   using: "composite"
 
