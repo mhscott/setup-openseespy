@@ -1,0 +1,18 @@
+name: "Setup OpenSeesPy"
+description: "Install OpenSeesPy and dependencies"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Install Linux dependencies
+      if runner.os == 'Linux'
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gfortran
+
+    - name: Install OpenSeesPy
+      shell: bash
+      run: |
+        pip install openseespy
