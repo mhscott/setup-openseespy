@@ -8,6 +8,13 @@ Minimal GitHub Action for installing OpenSeesPy via pip.
 - Assumes Python is already configured in the workflow
 - Supports Ubuntu, Windows, and macOS runners
 
+### Example Usage
+
+```yml
+- name: Setup OpenSeesPy
+  uses: mhscott/setup-openseespy@v1
+```
+
 ---
 
 ## v2.0.0 (Planned)
