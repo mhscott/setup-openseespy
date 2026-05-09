@@ -1,4 +1,18 @@
-## v1.0.0 (Current)
+## v1.0.1 (Current)
+
+### Changes from v1.0.0
+- Optional install of [opsvis](https://github.com/sewkokot/opsvis) (default: false)
+
+### Example Usage
+
+```yml
+- name: Setup OpenSeesPy
+  uses: mhscott/setup-openseespy@v1
+  with:
+    opsvis: true
+```
+
+## v1.0.0
 
 Minimal GitHub Action for installing OpenSeesPy via pip.
 
@@ -7,13 +21,6 @@ Minimal GitHub Action for installing OpenSeesPy via pip.
 - Installs OpenSeesPy in GitHub Actions workflows
 - Assumes Python is already configured in the workflow
 - Supports Ubuntu, Windows, and macOS runners
-
-### Example Usage
-
-```yml
-- name: Setup OpenSeesPy
-  uses: mhscott/setup-openseespy@v1
-```
 
 ---
 
