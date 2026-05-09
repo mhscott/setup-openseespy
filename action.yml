@@ -10,9 +10,10 @@ runs:
       shell: bash
       run: |
         sudo apt-get update
-        sudo apt-get install -y gfortran
+        # sudo apt-get install -y gfortran
 
     - name: Install OpenSeesPy
       shell: bash
       run: |
-        pip install openseespy
+        python -m pip install --upgrade pip
+        python -m pip install openseespy
