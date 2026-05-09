@@ -41,6 +41,6 @@ runs:
         python -m pip install --upgrade pip
         python -m pip install openseespy
 
-        if [ "${{ inputs.opsvis }}" = "true" ]; then
+        if ("${{ inputs.opsvis }}" -eq "true") {
           python -m pip install opsvis
-        fi
+        }
