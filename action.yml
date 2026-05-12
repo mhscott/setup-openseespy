@@ -6,11 +6,16 @@ branding:
   color: "blue"
 
 inputs:
+  version:
+    description: "openseespy version"
+    required: false
+    default: "latest"
+
   opsvis:
     description: "Install opsvis package"
     required: false
     default: "false"
-    
+
 runs:
   using: "composite"
 
@@ -28,7 +33,12 @@ runs:
       shell: bash
       run: |
         python -m pip install --upgrade pip
-        python -m pip install openseespy
+
+        if [ "${{ inputs.version }}" = "latest" ]; then
+          python -m pip install openseespy
+        else
+          python -m pip install openseespy==${{ inputs.version }}
+        fi
 
         if [ "${{ inputs.opsvis }}" = "true" ]; then
           python -m pip install opsvis
@@ -39,7 +49,13 @@ runs:
       shell: pwsh
       run: |
         python -m pip install --upgrade pip
-        python -m pip install openseespy
+
+        if ("${{ inputs.version }}" -eq "latest") {
+          python -m pip install openseespy
+        }
+        else {
+          python -m pip install openseespy==${{ inputs.version }}
+        }
 
         if ("${{ inputs.opsvis }}" -eq "true") {
           python -m pip install opsvis
