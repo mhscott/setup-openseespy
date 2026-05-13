@@ -54,7 +54,7 @@ runs:
           python -m pip install openseespy
         }
         else {
-          python -m pip install openseespy==${{ inputs.version }}
+          python -m pip install openseespy==${{ inputs.version }} openseespywin==${{ inputs.version }}
         }
 
         if ("${{ inputs.opsvis }}" -eq "true") {
