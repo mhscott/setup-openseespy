@@ -38,10 +38,10 @@ runs:
           python -m pip install openseespy
         else
           python -m pip install openseespy==${{ inputs.version }}
-          if [ "${{runner.os }}" = "Linux" ]; then
+          if [ "${{ runner.os }}" = "Linux" ]; then
             python3 -m pip install openseespylinux==${{ inputs.version }}
           fi
-          if [ "${{runner.os }}" = "macOS" ]; then
+          if [ "${{ runner.os }}" = "macOS" ]; then
             python3 -m pip install openseespymac==${{ inputs.version }}
           fi
         fi
