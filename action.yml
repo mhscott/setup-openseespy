@@ -77,3 +77,10 @@ runs:
         if ("${{ inputs.opsvis }}" -eq "true") {
           python -m pip install opsvis
         }
+
+    - name: Print installed versions
+      shell: bash
+      run: |
+        python --version
+
+        python -c "import openseespy.opensees as ops; print('OpenSeesPy:', ops.version())"
