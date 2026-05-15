@@ -4,8 +4,8 @@ Minimal GitHub Action for installing OpenSeesPy via pip.
 - Installs OpenSeesPy in GitHub Actions workflows
 - Supports Ubuntu, Windows, and macOS runners
 - Assumes Python is already configured in the workflow
-- Does _not_ attempt to resolve dependencies between Python and OpenSeesPy
-- Python >= 3.12 is recommended
+  - Does _not_ attempt to resolve dependencies between Python, OpenSeesPy, and the runner's operating system
+  - Python >= 3.12 and OpenSeesPy >= 3.5.1.2 are recommended
 
 ## v1.0.3 (Current)
 
